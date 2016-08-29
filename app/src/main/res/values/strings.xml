@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TodayNews</string>
+
+    <string name="news">&#160;&#160;新闻</string>
+    <string name="video">&#160;&#160;视频</string>
+    <string name="message">&#160;话题</string>
+    <string name="me">&#160;&#160;&#160;我</string>
 </resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 首页导航 -->
+    <string-array name="bottom_bar_labels">
+        <item>@string/news</item>
+        <item>@string/video</item>
+        <item>@string/message</item>
+        <item>@string/me</item>
+    </string-array>
+    <!-- 分类 -->
+
+</resources>
