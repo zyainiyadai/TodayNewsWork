@@ -1,3 +1,4 @@
+/*
 package com.zwhkj.todaynews.todaynews.presenter.base;
 
 import android.app.Activity;
@@ -6,18 +7,15 @@ import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
-import com.example.administrator.chinalife.activity.LoginActivity;
-import com.example.administrator.chinalife.model.BaseResponseEntity;
-import com.example.administrator.chinalife.utils.AppPreferenceImplUtil;
-import com.example.administrator.chinalife.utils.JsonTools;
-import com.example.administrator.chinalife.utils.LogUtil;
-import com.example.administrator.chinalife.utils.security.ZipAESUtils;
-import com.example.administrator.chinalife.widget.ToastView;
+
+import com.zwhkj.todaynews.todaynews.utils.AppPreferenceImplUtil;
+import com.zwhkj.todaynews.todaynews.utils.security.ZipAESUtils;
 
 import okhttp3.Call;
 import okhttp3.Request;
 import okhttp3.Response;
 
+*/
 /**
  * 类描述：对相应信息进行拦截
  *         1、获取token信息
@@ -27,7 +25,8 @@ import okhttp3.Response;
  * 修改人：BfJia
  * 修改时间：2016/8/11 0011 16:16
  * 修改备注：
- */
+ *//*
+
 public  abstract class InterceptCallBack extends DialogCallBack{
 
 
@@ -49,10 +48,12 @@ public  abstract class InterceptCallBack extends DialogCallBack{
         return message;
     }
 
-    /**
+    */
+/**
      * 获取构造传入的参数
      * @return
-     */
+     *//*
+
     protected  Context getContext()
     {
         return getParams(0);
@@ -111,18 +112,23 @@ public  abstract class InterceptCallBack extends DialogCallBack{
         error(isFromCache,call,response,e);
     }
 
-    /**
+    */
+/**
      * 请求响应
      * @param data 数据对象
      * @param request
      * @param response
-     */
+     *//*
+
     public abstract void response(boolean b, String data, Request request, @Nullable Response response);
 
-    /**
+    */
+/**
      * 请求出现错误
      * @param isFromCache
-     */
+     *//*
+
     public abstract void error(boolean isFromCache, Call call, @Nullable Response response, @Nullable Exception e);
 
 }
+*/

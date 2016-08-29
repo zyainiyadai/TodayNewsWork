@@ -1,3 +1,4 @@
+/*
 package com.zwhkj.todaynews.todaynews.utils;
 
 import android.app.Notification;
@@ -16,8 +17,8 @@ import android.os.Message;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 
-import com.example.administrator.chinalife.R;
-import com.example.administrator.chinalife.activity.MainActivity;
+
+import com.zwhkj.todaynews.todaynews.R;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -28,17 +29,23 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class UpdateService extends Service {
-    /**
+    */
+/**
      * 下载apk的地址
-     */
+     *//*
+
     private String apkurl = "";
-    /**
+    */
+/**
      * 下载到手机的地址
-     */
+     *//*
+
     private String apkPath;
-    /**
+    */
+/**
      * 下载apk的名字
-     */
+     *//*
+
     private String apkName;
     private boolean canceled = false;
     private NotificationManager manager;
@@ -76,9 +83,11 @@ public class UpdateService extends Service {
         return super.onStartCommand(intent, flags, startId);
     }
 
-    /**
+    */
+/**
      * 创建通知
-     */
+     *//*
+
     private void setUpNotifiction() {
         manager = (NotificationManager) getSystemService(Service.NOTIFICATION_SERVICE);
         int icon = R.mipmap.ic_launcher;
@@ -111,9 +120,11 @@ public class UpdateService extends Service {
         manager.notify(0, notification);// 发送通知
     }
 
-    /**
+    */
+/**
      * 取消接收者
-     */
+     *//*
+
     class CanceledReceiver extends BroadcastReceiver {
 
         @Override
@@ -128,18 +139,22 @@ public class UpdateService extends Service {
     }
 
 
-    /**
+    */
+/**
      * 注册广播
-     */
+     *//*
+
     public void registerBroader() {
         IntentFilter filter = new IntentFilter();
         filter.addAction("canceled");
         registerReceiver(new CanceledReceiver(), filter);
     }
 
-    /**
+    */
+/**
      * 下载apk
-     */
+     *//*
+
     class DownApkRunnable implements Runnable {
 
         @Override
@@ -221,9 +236,11 @@ public class UpdateService extends Service {
         }
     };
 
-    /**
+    */
+/**
      * 安装apk
-     */
+     *//*
+
     private void installApk() {
         File apkFile = new File(apkPath, apkName);
         if (!apkFile.exists()) {
@@ -236,3 +253,4 @@ public class UpdateService extends Service {
         startActivity(intent);
     }
 }
+*/

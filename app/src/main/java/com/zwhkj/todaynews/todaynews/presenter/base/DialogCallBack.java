@@ -1,9 +1,9 @@
 package com.zwhkj.todaynews.todaynews.presenter.base;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.support.annotation.Nullable;
 
-import com.example.administrator.chinalife.widget.ProgressDialog;
 import com.lzy.okhttputils.request.BaseRequest;
 
 import okhttp3.Call;

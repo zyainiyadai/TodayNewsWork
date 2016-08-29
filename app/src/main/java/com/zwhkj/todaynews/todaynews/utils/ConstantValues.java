@@ -9,12 +9,13 @@ public class ConstantValues {
     public static String URL_DEBUG = "https://test.rtkj.com.cn:443/zito-gyrs-web-interface_war/gateWay";
     public static String URL_RELEASE = "https://test.rtkj.com.cn:443/zito-gyrs-web-interface_war/gateWay"; //外网
 
-    public static String PRODUCT_ID = "P120000000705";
 
-    /**
-     * rsa加密公共key名称
-     */
-    public static final String PUBLIC_KEY_HTTPS = "user_test_rtkj_com_cn.crt";
+
+    // 首页fragment索引值
+    public static final int NEWS_FRAGMENT_INDEX = 0;
+    public static final int VIDEO_FRAGMENT_INDEX = 1;
+    public static final int MESSAGE_FRAGMENT_INDEX=2;
+    public static final int ME_FRAGMENT_INDEX = 3;
 
     /**
      * 请求地址

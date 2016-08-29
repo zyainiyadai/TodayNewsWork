@@ -1,7 +1,7 @@
 package com.zwhkj.todaynews.todaynews.bean;
 
 
-import com.rtkj.junhetai.chinalife.utils.ArrayUtil;
+import com.zwhkj.todaynews.todaynews.utils.security.ArrayUtil;
 
 public class IntHashMap {
     /**

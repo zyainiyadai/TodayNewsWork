@@ -2,13 +2,11 @@ package com.zwhkj.todaynews.todaynews.presenter.base;
 
 import android.content.Context;
 
-import com.example.administrator.chinalife.utils.AppPreferenceImplUtil;
-import com.example.administrator.chinalife.utils.ConstantValues;
-import com.example.administrator.chinalife.utils.security.Md5Util;
-import com.example.administrator.chinalife.utils.security.ParameterUtil;
-import com.example.administrator.chinalife.utils.security.ZipAESUtils;
 import com.lzy.okhttputils.OkHttpUtils;
 import com.lzy.okhttputils.callback.AbsCallback;
+import com.zwhkj.todaynews.todaynews.utils.ConstantValues;
+import com.zwhkj.todaynews.todaynews.utils.security.Md5Util;
+import com.zwhkj.todaynews.todaynews.utils.security.ParameterUtil;
 
 import java.util.Map;
 
@@ -42,15 +40,13 @@ public class RequestPresenter<T> extends BasePresenter<T> {
     protected void request(Map<String, String> params, AbsCallback callback) {
         try {
             //参数配置,数据MD5，每次请求需要带有token
-            String encryption = ParameterUtil.toString(params);
+          /*  String encryption = ParameterUtil.toString(params);
             String sign = Md5Util.encrypt(encryption + AppPreferenceImplUtil.getToken(), "UTF-8");
             encryption += "&sign=" + sign;
             //数据加密，压缩
-            encryption = ZipAESUtils.aesGzip(encryption);
+            encryption = ZipAESUtils.aesGzip(encryption);*/
             //发起请求
-            OkHttpUtils.post(ConstantValues.getUrl())//
-                    .headers("Cookie", "JSESSIONID=" + AppPreferenceImplUtil.getSessionId()) //sessionID
-                    .params("s", encryption)
+            OkHttpUtils.post(ConstantValues.getUrl())//改
                     .execute(callback);
 
         } catch (Exception e) {

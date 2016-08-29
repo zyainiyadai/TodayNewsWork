@@ -1,10 +1,12 @@
+/*
 package com.zwhkj.todaynews.todaynews.utils;
 
-import com.example.administrator.chinalife.application.App;
-import com.example.administrator.chinalife.utils.security.Base64Util;
+
+import com.zwhkj.todaynews.todaynews.utils.security.Base64Util;
 
 import java.io.UnsupportedEncodingException;
 
+*/
 /**
  * 类描述：保存配置信息
  * 创建人：BfJia
@@ -12,7 +14,8 @@ import java.io.UnsupportedEncodingException;
  * 修改人：BfJia
  * 修改时间：2016/8/11 0011 16:57
  * 修改备注：
- */
+ *//*
+
 public class  AppPreferenceImplUtil extends AppPreferenceUtil{
 
     private static final String KEY_TOKEN = "token";
@@ -76,3 +79,4 @@ public class  AppPreferenceImplUtil extends AppPreferenceUtil{
     }
 
 }
+*/
