@@ -39,6 +39,8 @@ public class TabWidget extends LinearLayout {
     // 底部菜单的文字数组
     private CharSequence[] mLabels;
 
+
+
     public TabWidget(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     //
