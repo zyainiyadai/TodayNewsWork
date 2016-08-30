@@ -41,7 +41,7 @@ public class TabWidget extends LinearLayout {
 
     public TabWidget(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-
+    //
         TypedArray a = context.obtainStyledAttributes(attrs,
                 R.styleable.TabWidget, defStyle, 0);
 
