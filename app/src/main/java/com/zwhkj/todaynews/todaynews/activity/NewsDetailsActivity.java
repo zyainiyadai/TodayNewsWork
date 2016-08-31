@@ -12,6 +12,7 @@ import com.zwhkj.todaynews.todaynews.R;
 import com.zwhkj.todaynews.todaynews.bean.Constants;
 import com.zwhkj.todaynews.todaynews.bean.NewsBean;
 import com.zwhkj.todaynews.todaynews.customview.HTML5CustomWebView;
+import com.zwhkj.todaynews.todaynews.customview.MyWebView;
 import com.zwhkj.todaynews.todaynews.utils.ShortToast;
 
 
@@ -28,15 +29,16 @@ public class NewsDetailsActivity extends  BaseActivity {
     private TextView tv_detail_title;
     private TextView tv_detail_author;
     private TextView tv_detail_time;
-   // private HTML5CustomWebView wv_detail_content;
+    private MyWebView wv_detail_content;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newsdetails);
-        //initTitle("");
-        initDate();
+        initTitle("详情");
         initView();
+        initDate();
+
     }
 
     private void initDate() {
@@ -51,7 +53,9 @@ public class NewsDetailsActivity extends  BaseActivity {
                 "p{margin:0;\n" +
                 "padding:0;}\n" +
                 "</style>";
-       // wv_detail_content.loadDataWithBaseURL(null,content+mNewsBean.getContent().toString(),"text/html", "utf-8", null);
+         wv_detail_content.setHorizontalScrollBarEnabled(false);//水平不显示
+         wv_detail_content.setVerticalScrollBarEnabled(false); //垂直不显示
+         wv_detail_content.loadDataWithBaseURL(null,content+mNewsBean.getContent().toString(),"text/html", "utf-8", null);
 
     }
 
@@ -59,7 +63,7 @@ public class NewsDetailsActivity extends  BaseActivity {
         tv_detail_author=findView(R.id.tv_detail_author);
         tv_detail_time=findView(R.id.tv_detail_time);
         tv_detail_title=findView(R.id.tv_detail_title);
-       // wv_detail_content=findView(R.id.wv_detail_content);
+        wv_detail_content=findView(R.id.wv_detail_content);
     }
 
 }
