@@ -7,11 +7,8 @@ package com.zwhkj.todaynews.todaynews.bean;
  * 版本：v1.0
  */
 public class Constants {
-
-    /**
-     * 登录接口
-     */
-    public static final String URL_LOGIN_GATE_WAY = "gateWay";
-    public static final String APP_KEY ="MhLUUREFTt5WWF8RXX6L8atB";
+    public static final String URL ="http://api.jisuapi.com/news/get";
+    public static final String APP_KEY="57cfe59a0f3ad8f6";
+    public static final String NEWS_DETAILS="NEWS_DETAILS";
 }
 

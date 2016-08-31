@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="23dp"
+
+    >
+    <TextView
+        android:id="@+id/tv_detail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="小学生搞笑试卷答案，老师要去厕所哭一会儿"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:id="@+id/tv_detail_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="传闻微信精选"
+        android:layout_below="@id/tv_detail_title"
+        android:layout_marginTop="15dp"
+        />
+    <TextView
+        android:id="@+id/tv_detail_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_detail_title"
+        android:text="08-30 23:23"
+        android:layout_toRightOf="@id/tv_detail_author"
+        android:layout_alignTop="@id/tv_detail_author"
+        android:layout_marginLeft="15dp"
+        />
+    <View
+        android:id="@+id/ve_fen_ge_xian"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@mipmap/fengexian"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/tv_detail_author"
+        />
+    <WebView
+        android:id="@+id/wv_detail_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ve_fen_ge_xian"
+        android:layout_marginTop="15dp"
+        >
+    </WebView>
+
+
+
+</RelativeLayout>

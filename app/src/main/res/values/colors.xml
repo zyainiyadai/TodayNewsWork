@@ -11,4 +11,5 @@
     <color name="app_bg">#f3f4f6</color>
     <color name="bg_dialog">#00ffffff</color>
     <color name="new_address_n">#C0C0C0</color>
+    <color name="bg_line_gary">#D9D9D9</color>
 </resources>

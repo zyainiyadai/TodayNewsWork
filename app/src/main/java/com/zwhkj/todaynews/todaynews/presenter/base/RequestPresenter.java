@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.lzy.okhttputils.OkHttpUtils;
 import com.lzy.okhttputils.callback.AbsCallback;
+import com.zwhkj.todaynews.todaynews.bean.Constants;
 import com.zwhkj.todaynews.todaynews.utils.ConstantValues;
 import com.zwhkj.todaynews.todaynews.utils.security.Md5Util;
 import com.zwhkj.todaynews.todaynews.utils.security.ParameterUtil;
@@ -46,7 +47,8 @@ public class RequestPresenter<T> extends BasePresenter<T> {
             //数据加密，压缩
             encryption = ZipAESUtils.aesGzip(encryption);*/
             //发起请求
-            OkHttpUtils.post(ConstantValues.getUrl())//改
+            OkHttpUtils.post(Constants.URL)
+                    .params(params)
                     .execute(callback);
 
         } catch (Exception e) {

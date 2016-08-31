@@ -1,21 +1,16 @@
-/*
 package com.zwhkj.todaynews.todaynews.presenter.base;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
 
-import com.zwhkj.todaynews.todaynews.utils.AppPreferenceImplUtil;
 import com.zwhkj.todaynews.todaynews.utils.security.ZipAESUtils;
 
 import okhttp3.Call;
 import okhttp3.Request;
 import okhttp3.Response;
 
-*/
 /**
  * 类描述：对相应信息进行拦截
  *         1、获取token信息
@@ -25,7 +20,7 @@ import okhttp3.Response;
  * 修改人：BfJia
  * 修改时间：2016/8/11 0011 16:16
  * 修改备注：
- *//*
+ */
 
 public  abstract class InterceptCallBack extends DialogCallBack{
 
@@ -41,18 +36,16 @@ public  abstract class InterceptCallBack extends DialogCallBack{
     @Override
     public String parseNetworkResponse(Response response) throws Exception {
         String message = super.parseNetworkResponse(response);
-        if(!TextUtils.isEmpty(message))
+      /*  if(!TextUtils.isEmpty(message))
         {
             message = ZipAESUtils.aesGunzip(message);
-        }
+        }*/
         return message;
     }
-
-    */
 /**
      * 获取构造传入的参数
      * @return
-     *//*
+     */
 
     protected  Context getContext()
     {
@@ -74,34 +67,6 @@ public  abstract class InterceptCallBack extends DialogCallBack{
     public void onResponse(boolean b, String data, Request request, @Nullable Response response) {
         super.onResponse(b,data, request, response);
         if(gc())return;
-        LogUtil.i("===============================data: "+data);
-        //token解析,并保存
-        if(!TextUtils.isEmpty(data))
-        {
-            BaseResponseEntity baseResponseEntity = JsonTools.getBean(data,BaseResponseEntity.class);
-            if(null != baseResponseEntity )
-            {
-                Context context = getContext();
-                //出现错误，重新登录，主要是防止session失效，现在没有返回session失效的错误code
-                if(baseResponseEntity.hasRLogin() && null != context)
-                {
-                    //清空token
-                    AppPreferenceImplUtil.saveToken("");
-                    AppPreferenceImplUtil.saveSessionId("");
-                    AppPreferenceImplUtil.saveSalerId("");
-                    ToastView.show(context,baseResponseEntity.getMsg());
-                    Intent intent = new Intent(context, LoginActivity.class);
-                    context.startActivity(intent);
-                    ((Activity)context).finish();
-                    return;
-                }
-                //保存token
-                if(!TextUtils.isEmpty(baseResponseEntity.getToken()))
-                {
-                    AppPreferenceImplUtil.saveToken(baseResponseEntity.getToken());
-                }
-            }
-        }
         response(b,data,request,response);
     }
 
@@ -112,23 +77,22 @@ public  abstract class InterceptCallBack extends DialogCallBack{
         error(isFromCache,call,response,e);
     }
 
-    */
 /**
      * 请求响应
      * @param data 数据对象
      * @param request
      * @param response
-     *//*
+     */
 
     public abstract void response(boolean b, String data, Request request, @Nullable Response response);
 
-    */
+
 /**
      * 请求出现错误
      * @param isFromCache
-     *//*
+     */
 
     public abstract void error(boolean isFromCache, Call call, @Nullable Response response, @Nullable Exception e);
 
 }
-*/
+
