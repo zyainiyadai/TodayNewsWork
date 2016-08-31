@@ -42,14 +42,14 @@
         android:layout_marginTop="15dp"
         android:layout_below="@id/tv_detail_author"
         />
-    <WebView
+    <!--<com.zwhkj.todaynews.todaynews.customview.HTML5CustomWebView
         android:id="@+id/wv_detail_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/ve_fen_ge_xian"
         android:layout_marginTop="15dp"
         >
-    </WebView>
+    </com.zwhkj.todaynews.todaynews.customview.HTML5CustomWebView>-->
 
 
 

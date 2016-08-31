@@ -5,4 +5,6 @@
     <string name="video">&#160;&#160;视频</string>
     <string name="message">&#160;话题</string>
     <string name="me">&#160;&#160;&#160;我</string>
+    <string name="string_tv_top_bar_back">返回</string>
+    <string name="string_tv_setting">WebView页面</string>
 </resources>

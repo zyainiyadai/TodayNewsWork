@@ -14,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.apkfuns.logutils.LogUtils;
-import com.bigkoo.svprogresshud.SVProgressHUD;
 import com.bumptech.glide.Glide;
 import com.zwhkj.todaynews.todaynews.R;
 import com.zwhkj.todaynews.todaynews.activity.NewsDetailsActivity;
@@ -22,8 +21,6 @@ import com.zwhkj.todaynews.todaynews.adapter.CommonAdapter;
 import com.zwhkj.todaynews.todaynews.adapter.ViewHolderCome;
 import com.zwhkj.todaynews.todaynews.bean.Constants;
 import com.zwhkj.todaynews.todaynews.bean.NewsBean;
-import com.zwhkj.todaynews.todaynews.customview.MyListView;
-import com.zwhkj.todaynews.todaynews.model.NesListEntity;
 import com.zwhkj.todaynews.todaynews.presenter.NewsPresenter;
 import com.zwhkj.todaynews.todaynews.presenter.NewsView;
 import com.zwhkj.todaynews.todaynews.utils.ShortToast;

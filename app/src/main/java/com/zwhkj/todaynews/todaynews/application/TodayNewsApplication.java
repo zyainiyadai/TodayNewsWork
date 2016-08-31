@@ -19,11 +19,15 @@ import com.zwhkj.todaynews.todaynews.utils.ConstantValues;
  */
 public class TodayNewsApplication extends Application {
     public static Context context;
-
+    private static TodayNewsApplication instance;
+    public  static TodayNewsApplication getInstance(){
+        return instance;
+    }
     @Override
     public void onCreate() {
         super.onCreate();
         context=getApplicationContext();
+        this.instance=this;
         OkHttpUtils.init(this);
         OkHttpUtils.getInstance()
                 .debug("LogUtil"); //https证书
